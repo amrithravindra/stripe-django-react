@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-stripe.api_key = 'sk_test_...'
+stripe.api_key = 'sk_test_51HxEBgBt936UMiAM3pAjX7u7pfm15DLkwreaBdGQxMq7J1ZHcZEDpqlgzXxNunwCUk2cLrLlQKSztRNzDUL8g6bl00mCwJmAmA'
 
 
 @api_view(['POST'])
