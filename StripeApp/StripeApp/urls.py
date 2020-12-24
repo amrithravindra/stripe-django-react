@@ -19,6 +19,5 @@ import StripeApp.payments
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('payments/', include('payments.urls')),
-    path('restaurant/', include('restaurant.urls'))
+    path('payments/', include('payments.urls'))
 ]
