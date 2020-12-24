@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from payments import views
+from StripeApp.payments import views
 
 urlpatterns = [
     url(r'^test-payment/$', views.test_payment),
