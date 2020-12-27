@@ -4,13 +4,13 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 # Create your views here.
-stripe.api_key = 'sk_test_51HxEBgBt936UMiAM3pAjX7u7pfm15DLkwreaBdGQxMq7J1ZHcZEDpqlgzXxNunwCUk2cLrLlQKSztRNzDUL8g6bl00mCwJmAmA'
+stripe.api_key = 'sk_live_...'
 
 @api_view(['POST'])
 def test_payment(request):
     test_payment_intent = stripe.PaymentIntent.create(
-        amount=1000, 
-        currency='pln', 
+        amount=1, 
+        currency='usd', 
         payment_method_types=['card'],
         receipt_email='test@example.com')
     return Response(status=status.HTTP_200_OK, data=test_payment_intent)
@@ -54,17 +54,6 @@ def save_stripe_info(request):
                                 payment_method=payment_method_id,
                                 currency='pln', amount=1500,
                                 confirm=True)
-
-    # creating subscription
-
-    stripe.Subscription.create(
-        customer=customer,
-        items=[
-            {
-                'price': 'price_1...'
-            }
-        ]
-    )
 
     return Response(status=status.HTTP_200_OK, data={'message': 'Success', 'data': {'customer_id': customer.id,
                                                                                     'extra_msg': extra_msg}})

@@ -4,7 +4,7 @@ import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from "@stripe/stripe-js/pure";
 import CheckoutForm from "./components/CheckoutForm";
 
-const stripePromise = loadStripe('pk_test_51HxEBgBt936UMiAMQkOnjrNLMNEOuwm9Yyfn5RrRaqYjXwnAbPdgOxYSi9HI3XQmnsycmeQqEeQiCpeww978GIqi002VqjHJaH');
+const stripePromise = loadStripe('pk_live_...');
 const App = () => (
   <Elements stripe={stripePromise}>
     <CheckoutForm />
